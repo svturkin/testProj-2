@@ -9,7 +9,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get('nodejs/:branchName')
-  getNodejsCommitsInfo(@Param('branchName') branchName: string): Promise<ResponseDto> {
+  getNodejsCommitsInfo(@Param('branchName') branchName: string): Promise<ResponseDto[]> {
     return this.appService.getNodejsCommitsInfo(branchName)
   }
 }
